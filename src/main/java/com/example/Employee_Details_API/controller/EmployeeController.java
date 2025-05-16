@@ -23,6 +23,10 @@ public class EmployeeController {
 //    public List<Employee> getAllEmployDetails(){
 //        return employeeService.getAllEmployDeails();
 //    }
+
+
+     git commands...
+
     @GetMapping("/getEmployees")
     public ResponseEntity<Map<String, Object>> getAllEmployDetails(
             @RequestParam(defaultValue = "0") int page,
@@ -95,6 +99,8 @@ public class EmployeeController {
     public List<Employee> searchKey(@PathVariable("keyword") String keyword){
         return employeeService.searchKey(keyword);
     }
+
+
 }
 
 
