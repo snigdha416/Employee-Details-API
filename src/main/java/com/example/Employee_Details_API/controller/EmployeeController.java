@@ -24,6 +24,11 @@ public class EmployeeController {
 //        return employeeService.getAllEmployDeails();
 //    }
 
+//    @GetMapping("/getEmployees")
+//    public List<Employee> getAllEmployDetails(){
+//        return employeeService.getAllEmployDeails();
+//    }
+
      git commands...
 
     @GetMapping("/getEmployees")
