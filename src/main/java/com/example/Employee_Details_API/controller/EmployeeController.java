@@ -59,8 +59,8 @@ public class EmployeeController {
 
     private Sort.Order getSortOrder(String[] sort) {
         if (sort[0].contains(",")) {
-            // will sort more than 2 fields
-            // sortOrder="field, direction"
+            will sort more than 2 fields
+            sortOrder="field, direction"
             return new Sort.Order(Sort.Direction.fromString(sort[1]), sort[0]);
         } else {
             // sort=[field, direction]
@@ -72,6 +72,8 @@ public class EmployeeController {
     public Employee addEmployee(@RequestBody Employee employee){
         return employeeService.addEmployee(employee);
     }
+    
+    git commands...
 
     @GetMapping("/getEmployee/{id}")
     public Optional<Employee> getEmployee(@PathVariable Integer id){
@@ -94,3 +96,7 @@ public class EmployeeController {
         return employeeService.searchKey(keyword);
     }
 }
+
+
+
+working directory     staging area     local repository   == >  git repository
