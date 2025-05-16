@@ -40,6 +40,8 @@ public class EmployeeController {
         } else {
             // sort=[field, direction]
             orders.add(new Sort.Order(Sort.Direction.fromString(sort[1]), sort[0]));
+
+            System.out.println("git commands");
         }
 
         Pageable pageable = PageRequest.of(page, size, Sort.by(orders));
