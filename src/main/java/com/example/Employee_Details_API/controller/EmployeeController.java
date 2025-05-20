@@ -109,5 +109,9 @@ public class EmployeeController {
         return employeeService.searchKey(keyword);
     }
 
+     @GetMapping("/search/{keyword}")
+    public List<Employee> searchKey(@PathVariable("keyword") String keyword){
+        return employeeService.searchKey(keyword);
+    }
 
 }
