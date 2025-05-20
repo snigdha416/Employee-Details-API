@@ -19,24 +19,10 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-//    @GetMapping("/getEmployees")
-//    public List<Employee> getAllEmployDetails(){
-//        return employeeService.getAllEmployDeails();
-//    }
-
-
-//    @GetMapping("/getEmployees")
-//    public List<Employee> getAllEmployDetails(){
-//        return employeeService.getAllEmployDeails();
-//    }
-
-
-//    @GetMapping("/getEmployees")
-//    public List<Employee> getAllEmployDetails(){
-//        return employeeService.getAllEmployDeails();
-//    }
-
-     git commands...
+   @GetMapping("/getEmployees")
+   public List<Employee> getAllEmployDetails(){
+       return employeeService.getAllEmployDeails();
+   }
 
     @GetMapping("/getEmployees")
     public ResponseEntity<Map<String, Object>> getAllEmployDetails(
@@ -74,8 +60,7 @@ public class EmployeeController {
 
     private Sort.Order getSortOrder(String[] sort) {
         if (sort[0].contains(",")) {
-            // will sort more than 2 fields
-            // sortOrder="field, direction"
+            sortOrder="field, direction"
             return new Sort.Order(Sort.Direction.fromString(sort[1]), sort[0]);
         } else {
             // sort=[field, direction]
@@ -114,4 +99,7 @@ public class EmployeeController {
         return employeeService.searchKey(keyword);
     }
 
+    git commands....
 }
+
+
